@@ -57,13 +57,14 @@ function sunIntervalNumbers(number1, number2){
  * do range (1-10) a função deve retornar uma mensagem indicando que o número informado é inválido.
  */
 function sunRangeNumber(number){
-    let sun = 1;
     if(number >= 1 && number <= 10){
-        while(number <= 10){
-            sun *= number;
-            number++;    
+        let fatorial = 1;
+        let cont = 1;
+        while(cont <= number){
+            fatorial *= cont;
+            cont++;    
         }
-        return sun;
+        return fatorial;
     }   
     return "Número informado é inválido!." 
 }
@@ -203,6 +204,7 @@ console.log("\n")
 console.log("|=========== EX 04 ====================|")
 console.log("\n")
 console.log(sunRangeNumber(5));
+console.log(sunRangeNumber(3));
 console.log(sunRangeNumber(20));
 console.log("\n")
 
